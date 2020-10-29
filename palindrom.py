@@ -8,10 +8,12 @@ def is_palindrome(palindrome):
         rev = ''.join(reversed(palindrome))
         if palindrome == rev:
             return True
+    else:
+        print('Type if the argument must be str!')        
     return False
 
 
-a = 2
+a = 'kajak'
 
 if is_palindrome(a):
     print('{} is palindrome'.format(a))
