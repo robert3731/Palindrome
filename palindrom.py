@@ -5,15 +5,16 @@ def is_palindrome(palindrome):
     '''
 
     if type(palindrome) == str:
-        rev = ''.join(reversed(palindrome))
-        if palindrome == rev:
+        s = ''.join(c for c in palindrome if c.isalnum())
+        rev = ''.join(reversed(s))
+        if s == rev:
             return True
     else:
         print('Type if the argument must be str!')        
     return False
 
 
-a = 'kajak'
+a = 'Kobyła ma mały bok!'
 
 if is_palindrome(a):
     print('{} is palindrome'.format(a))
