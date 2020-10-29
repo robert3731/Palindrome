@@ -5,7 +5,7 @@ def is_palindrome(palindrome):
     '''
 
     if type(palindrome) == str:
-        s = ''.join(c for c in palindrome if c.isalnum())
+        s = ''.join(c for c in palindrome if c.isalnum()).lower()
         rev = ''.join(reversed(s))
         if s == rev:
             return True
