@@ -1,16 +1,13 @@
-def is_palindrome(palindrome):
-    '''
-    Function to check if argument is palindrome.
-    Argument must be string.
-    '''
-
-    if type(palindrome) == str:
-        s = ''.join(c for c in palindrome if c.isalnum()).lower()
-        rev = ''.join(reversed(s))
-        if s == rev:
-            return True
-    else:
-        print('Type if the argument must be str!')        
+def is_palindrome(palindrome: str) -> bool:
+    """
+    Function to check a string is palindrome.
+    :param palindrome: string
+    :return: True/False
+    """
+# rev = ''.join(reversed(palindrome))
+    s = ''.join(c for c in palindrome if c.isalnum()).lower()
+    if s == s[::-1]:
+        return True
     return False
 
 
