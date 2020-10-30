@@ -4,8 +4,8 @@ def is_palindrome(palindrome: str) -> bool:
     :param palindrome: string
     :return: True/False
     """
-# rev = ''.join(reversed(palindrome))
     s = ''.join(c for c in palindrome if c.isalnum()).lower()
+#   rev = ''.join(reversed(palindrome))
     if s == s[::-1]:
         return True
     return False
