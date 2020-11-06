@@ -1,4 +1,4 @@
-#import pytest --> nie chce mi zaipmortować modułu pytest mimo że jest zainstalowany
+import pytest
 
 def is_palindrome(palindrome: str) -> bool:
     """
@@ -21,9 +21,9 @@ def test_is_palindrome():
     assert result is True
 
 
-#def test_raises_exception_on_non_string_arguments():
-#    with pytest.raises(TypeError):
-#        is_palindrome(1)
+def test_raises_exception_on_non_string_arguments():
+    with pytest.raises(TypeError):
+        is_palindrome(1)
 
 
 a = input('Enter text you want to check:')
